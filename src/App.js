@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import { /* BinaryTree, */ RedBlackTree } from "./tree";
+import { /* BinaryTree, */ RedBlackTree } from "./RedBlackTree";
 
 function App() {
   const tree = new RedBlackTree(0);
@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/*         <h1>Red Black Tree Player</h1>
+                <h1>Red Black Tree Player</h1>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -96,7 +96,8 @@ function App() {
           все кейсы удаления. Для управления проигрыванием оставить только
           ползунок скорости (который будет менять цвет на направлениях и
           остановке).
-        </p> */}
+          Палитру цветов для линий и элементов можно взять из vs code
+        </p>
       </header>
     </div>
   );
