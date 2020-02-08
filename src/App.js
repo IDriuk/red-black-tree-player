@@ -1,12 +1,29 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
+import { /* BinaryTree, */ RedBlackTree } from "./tree";
+
 function App() {
+  const tree = new RedBlackTree(0);
+
+  const children = [];
+  for (let i = 1; i < 500; i++) {
+    let child = tree.insert(i);
+    children.push(child);
+  }
+
+  for (let i = 499; i > 100; i--) {
+    tree.remove(i);
+  }
+
+  for (let i = 0; i < 100; i++) {
+    console.log(children[i].countBlackToRoot());
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Red Black Tree Player</h1>
+        {/*         <h1>Red Black Tree Player</h1>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -67,6 +84,19 @@ function App() {
           паузы, регулировкой скорости , изменением направления анимации вперед
           и назад
         </p>
+        <p>
+          Итого, для начала подобрать список данных так, чтобы он красиво
+          преобразовывался в красно черное дерево, перебирал все кейсы алгоритма
+          и сделать, чтобы это преобразование проигрывалось вперед и назад,
+          можно было менять скорость и направление проигрывания или ставить на
+          паузу (например, чтобы проигрывание зависело от величины скорости,
+          если позитивная скорость, то проигрывание вперед, если негативная , то
+          назад, если нулевая , то пауза). Подобрать список для вставки и
+          подобрать порядок, в котором из дерева будут удаляться узлы, перебирая
+          все кейсы удаления. Для управления проигрыванием оставить только
+          ползунок скорости (который будет менять цвет на направлениях и
+          остановке).
+        </p> */}
       </header>
     </div>
   );
