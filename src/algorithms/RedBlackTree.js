@@ -1,12 +1,9 @@
-// initial red black tree algorithm
-// should be here simply like example
-
 const identity = i => i;
 const LEFT = 0;
 const RIGHT = 1;
 const oppDir = dir => (dir === RIGHT ? LEFT : RIGHT);
 
-export class BinaryTree {
+class BinaryTree {
   constructor(value, identifier = identity) {
     this.value = value;
     this.children = [];
@@ -240,7 +237,7 @@ export class BinaryTree {
 const BLACK = "b";
 const RED = "r";
 
-export class RedBlackTree extends BinaryTree {
+export default class RedBlackTree extends BinaryTree {
   constructor(value, identifier = identity, color = BLACK) {
     super(value, identifier);
     this.color = color;

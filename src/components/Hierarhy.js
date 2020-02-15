@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import * as d3 from "d3";
 
-// import { BinaryTree, RedBlackTree } from "../services/tree";
-
 const buildTree = () => {
   const dims = { height: 500, width: 1100 };
 
