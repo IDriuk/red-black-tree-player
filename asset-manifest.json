@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/red-black-tree-player/static/css/main.9526cfdf.chunk.css",
-    "main.js": "/red-black-tree-player/static/js/main.9dccbc64.chunk.js",
-    "main.js.map": "/red-black-tree-player/static/js/main.9dccbc64.chunk.js.map",
+    "main.js": "/red-black-tree-player/static/js/main.df9c79fa.chunk.js",
+    "main.js.map": "/red-black-tree-player/static/js/main.df9c79fa.chunk.js.map",
     "runtime-main.js": "/red-black-tree-player/static/js/runtime-main.f2124e3f.js",
     "runtime-main.js.map": "/red-black-tree-player/static/js/runtime-main.f2124e3f.js.map",
-    "static/js/2.381a0fc9.chunk.js": "/red-black-tree-player/static/js/2.381a0fc9.chunk.js",
-    "static/js/2.381a0fc9.chunk.js.map": "/red-black-tree-player/static/js/2.381a0fc9.chunk.js.map",
+    "static/js/2.2dee3067.chunk.js": "/red-black-tree-player/static/js/2.2dee3067.chunk.js",
+    "static/js/2.2dee3067.chunk.js.map": "/red-black-tree-player/static/js/2.2dee3067.chunk.js.map",
     "index.html": "/red-black-tree-player/index.html",
-    "precache-manifest.6eef636d8bb2bb94bf7c05df432c90ac.js": "/red-black-tree-player/precache-manifest.6eef636d8bb2bb94bf7c05df432c90ac.js",
+    "precache-manifest.a14eac674dc9deb761add7605a12a20e.js": "/red-black-tree-player/precache-manifest.a14eac674dc9deb761add7605a12a20e.js",
     "service-worker.js": "/red-black-tree-player/service-worker.js",
     "static/css/main.9526cfdf.chunk.css.map": "/red-black-tree-player/static/css/main.9526cfdf.chunk.css.map",
-    "static/js/2.381a0fc9.chunk.js.LICENSE": "/red-black-tree-player/static/js/2.381a0fc9.chunk.js.LICENSE"
+    "static/js/2.2dee3067.chunk.js.LICENSE": "/red-black-tree-player/static/js/2.2dee3067.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.f2124e3f.js",
-    "static/js/2.381a0fc9.chunk.js",
+    "static/js/2.2dee3067.chunk.js",
     "static/css/main.9526cfdf.chunk.css",
-    "static/js/main.9dccbc64.chunk.js"
+    "static/js/main.df9c79fa.chunk.js"
   ]
 }
