@@ -6,10 +6,11 @@ import Hierarhy from "./components/Hierarhy";
 import Tree from './components/Tree'
 
 function App() {
+  console.log('Description, Hierarhy ========', Description, Hierarhy)
   return (
     <div className="App">
-      <Description />
-      <Hierarhy />
+      {/* <Description />
+      <Hierarhy /> */}
       <Tree />
     </div>
   );
