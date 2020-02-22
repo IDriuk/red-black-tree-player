@@ -8,17 +8,14 @@ const runVisualization = async () => {
 
   const animatedTree = new AnimatedTree(canvas);
 
-  for (let i = 0; i <= 50; i++) {
+  for (let i = 0; i <= 10; i++) {
     await animatedTree.insert(i);
   }
-
-  console.log(animatedTree);
 
   // for (let i = 50; i >= 20; i--) {
   //   await animatedTree.remove(i);
   // }
 
-  console.log(animatedTree);
 };
 
 function Tree() {

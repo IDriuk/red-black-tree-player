@@ -40,7 +40,7 @@ export const initSvgEls = (canvas, value, color ) => {
     .attr("marker-end", "url(#blackTriangle)")
     .attr("opacity", 1);
 
-  const valueTxt = value && canvas
+  const valueTxt = canvas
     .append("text")
     .attr("text-anchor", "middle")
     .attr("fill", "white")

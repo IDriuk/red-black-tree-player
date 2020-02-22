@@ -1,3 +1,4 @@
+import _ from 'underscore'
 import {
   identity,
   LEFT,
@@ -22,7 +23,9 @@ export default class AnimatedRedBlackTree extends RedBlackTree {
       linkToRightChild: { x1: 0, y1: 0, x2: 0, y2: 0 }
     };
 
-    this.svgEls = initSvgEls(canvas, value, this.color);
+    if (_.isFinite(value)) {
+      this.svgEls = initSvgEls(canvas, value, this.color);
+    }
   }
 
   updateCoordinates(center) {
@@ -88,6 +91,7 @@ export default class AnimatedRedBlackTree extends RedBlackTree {
     if (this.value === undefined) {
       this.value = value;
       this.paintBlack();
+      this.svgEls = initSvgEls(this.canvas, value, this.color);
       return;
     }
     let dir;
