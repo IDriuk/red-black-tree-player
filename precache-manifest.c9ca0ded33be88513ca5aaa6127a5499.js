@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "63ce456dc1b993ea6e052ead8c0f96ca",
+    "revision": "5a3e9869690a2475592a8801b55d56ca",
     "url": "/red-black-tree-player/index.html"
   },
   {
-    "revision": "0c6bbe5a8f87afec3286",
+    "revision": "4f22664eb0a10764563e",
     "url": "/red-black-tree-player/static/css/main.9526cfdf.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/red-black-tree-player/static/js/2.d6f08ea3.chunk.js.LICENSE"
   },
   {
-    "revision": "0c6bbe5a8f87afec3286",
-    "url": "/red-black-tree-player/static/js/main.a11bd288.chunk.js"
+    "revision": "4f22664eb0a10764563e",
+    "url": "/red-black-tree-player/static/js/main.5e1485b3.chunk.js"
   },
   {
     "revision": "d921f516ddf656e2dd6d",
