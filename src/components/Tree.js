@@ -4,7 +4,7 @@ import { canvasTest, initSvg } from "../helpers";
 
 const runVisualization = async () => {
   const canvas = initSvg();
-  canvasTest(canvas);
+  // canvasTest(canvas);
 
   const animatedTree = new AnimatedTree(canvas);
 
@@ -14,9 +14,9 @@ const runVisualization = async () => {
 
   console.log(animatedTree);
 
-  for (let i = 50; i >= 20; i--) {
-    await animatedTree.remove(i);
-  }
+  // for (let i = 50; i >= 20; i--) {
+  //   await animatedTree.remove(i);
+  // }
 
   console.log(animatedTree);
 };

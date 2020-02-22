@@ -8,6 +8,7 @@ import {
   CIRCLE_RADIUS
 } from "../config";
 import RedBlackTree from "../algorithms/RedBlackTree";
+import { initSvgEls } from "../helpers";
 
 export default class AnimatedRedBlackTree extends RedBlackTree {
   constructor(canvas, value, identifier, color) {
@@ -15,19 +16,13 @@ export default class AnimatedRedBlackTree extends RedBlackTree {
     this.canvas = canvas;
 
     this.coordinates = {
-      center: { x: false, y: false },
-      linkToParent: { x1: false, y1: false, x2: false, y2: false },
-      linkToLeftChild: { x1: false, y1: false, x2: false, y2: false },
-      linkToRightChild: { x1: false, y1: false, x2: false, y2: false }
+      center: { x: 0, y: 0 },
+      linkToParent: { x1: 0, y1: 0, x2: 0, y2: 0 },
+      linkToLeftChild: { x1: 0, y1: 0, x2: 0, y2: 0 },
+      linkToRightChild: { x1: 0, y1: 0, x2: 0, y2: 0 }
     };
 
-    this.svgEls = {
-      circle: false,
-      valueTxt: false,
-      topArrow: false,
-      leftArrow: false,
-      rightArrow: false
-    };
+    this.svgEls = initSvgEls(canvas, value, this.color);
   }
 
   updateCoordinates(center) {
