@@ -1,4 +1,4 @@
-import _ from 'underscore'
+import _ from "underscore";
 import {
   identity,
   LEFT,
@@ -9,7 +9,7 @@ import {
   CIRCLE_RADIUS
 } from "../config";
 import RedBlackTree from "../algorithms/RedBlackTree";
-import { initSvgEls } from "../helpers";
+import { initSvgEls, cleanSvgEls } from "../helpers";
 
 export default class AnimatedRedBlackTree extends RedBlackTree {
   constructor(canvas, value, identifier, color) {
@@ -63,6 +63,9 @@ export default class AnimatedRedBlackTree extends RedBlackTree {
     );
     replacement.parent = this.parent;
     replacement.children = this.children;
+    cleanSvgEls(replacement.svgEls)
+    replacement.svgEls = this.svgEls
+    
     if (this.parent !== undefined) {
       if (this.isRightChild) {
         this.parent.right = replacement;
@@ -75,6 +78,7 @@ export default class AnimatedRedBlackTree extends RedBlackTree {
     this.children = replacement.parent.children;
     this.parent = replacement.parent.parent;
     this.color = replacement.parent.color;
+    this.svgEls = replacement.parent.svgEls;
 
     this.children.forEach(child => {
       if (child) child.parent = this;
