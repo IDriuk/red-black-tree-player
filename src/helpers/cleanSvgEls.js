@@ -1,30 +1,13 @@
-import { TRANSITION_DURATION } from "../config";
-
 export const cleanSvgEls = svgEls => {
   const { circle, valueTxt, topArrow, leftArrow, rightArrow } = svgEls;
 
-  circle
-    .transition()
-    .duration(TRANSITION_DURATION)
-    .remove();
+  circle.remove();
 
-  valueTxt
-    .transition()
-    .duration(TRANSITION_DURATION)
-    .remove();
+  valueTxt.remove();
 
-  topArrow
-    .transition()
-    .duration(TRANSITION_DURATION)
-    .remove();
+  topArrow.remove();
 
-  leftArrow
-    .transition()
-    .duration(TRANSITION_DURATION)
-    .remove();
+  leftArrow.remove();
 
-  rightArrow
-    .transition()
-    .duration(TRANSITION_DURATION)
-    .remove();
+  rightArrow.remove();
 };

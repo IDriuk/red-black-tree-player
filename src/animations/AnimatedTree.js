@@ -94,4 +94,28 @@ export default class AnimatedRedBlackTree extends RedBlackTree {
       return child;
     }
   }
+
+  standardRemove(value) {
+    if (this.isLeaf) {
+      if (this.isRoot) {
+        this.value = undefined;
+        this.paintBlack();
+      } else if (this.isRightChild) {
+        cleanSvgEls(this.parent.right.svgEls);
+        this.parent.right = undefined;
+      } else if (this.isLeftChild) {
+        cleanSvgEls(this.parent.left.svgEls);
+        this.parent.left = undefined;
+      }
+    } else if (this.hasOneChild) {
+      let rmDir = this.right ? LEFT : RIGHT;
+      this.right ? this.rotateLeft() : this.rotateRight();
+      cleanSvgEls(this.children[rmDir].svgEls);
+      this.children[rmDir] = undefined;
+    } else if (this.hasTwoChildren) {
+      let replica = this.right._minimumChild();
+      this.value = replica.value;
+      this.right.remove(replica.value);
+    }
+  }
 }

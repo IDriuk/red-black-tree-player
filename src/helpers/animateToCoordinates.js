@@ -36,7 +36,7 @@ const ownAnimations = (coordinates, svgEls, color, hasLeft, hasRight) => {
     topArrow
       .transition()
       .duration(TRANSITION_DURATION)
-      .attr("opacity", y1 == y2 ? 0 : 1)
+      .attr("opacity", y1 === y2 ? 0 : 1)
       .attr("x1", x1)
       .attr("y1", y1)
       .attr("x2", x2)
