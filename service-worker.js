@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/red-black-tree-player/precache-manifest.c9ca0ded33be88513ca5aaa6127a5499.js"
+  "/red-black-tree-player/precache-manifest.55639589e9ff3cfd170da1fc36d87ad7.js"
 );
 
 self.addEventListener('message', (event) => {
