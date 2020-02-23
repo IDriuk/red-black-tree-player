@@ -12,6 +12,9 @@ const runVisualization = async () => {
     await animatedTree.insert(i);
   }
 
+  animatedTree.updateCoordinates()
+  console.log(animatedTree)
+
   // for (let i = 50; i >= 20; i--) {
   //   await animatedTree.remove(i);
   // }
