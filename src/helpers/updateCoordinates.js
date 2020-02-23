@@ -12,7 +12,7 @@ export function updateCoordinates(parentCenter, currentCenter, level = 0) {
   const levelWidth = CANVAS_WIDTH / Math.pow(2, level + 1);
 
   if (parentCenter && currentCenter) {
-    this.svgEls.topArrow.attr("opacity", 1);
+    // this.svgEls.topArrow.attr("opacity", 1);
 
     const center = currentCenter;
     const leftCenter = {
@@ -61,7 +61,7 @@ export function updateCoordinates(parentCenter, currentCenter, level = 0) {
   } else if (this.parent) {
     this.parent.updateCoordinates();
   } else {
-    this.svgEls.topArrow.attr("opacity", 0);
+    // this.svgEls.topArrow.attr("opacity", 0);
 
     const center = { x: levelWidth, y: levelHeight * level };
     const leftCenter = {

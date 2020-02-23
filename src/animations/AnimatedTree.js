@@ -1,7 +1,12 @@
 import _ from "underscore";
-import { identity, LEFT, RIGHT, oppDir, BLACK, RED } from "../config";
+import { LEFT, RIGHT, RED } from "../config";
 import RedBlackTree from "../algorithms/RedBlackTree";
-import { initSvgEls, cleanSvgEls, updateCoordinates } from "../helpers";
+import {
+  initSvgEls,
+  cleanSvgEls,
+  updateCoordinates,
+  animateToCoordinates
+} from "../helpers";
 
 export default class AnimatedRedBlackTree extends RedBlackTree {
   constructor(canvas, value, identifier, color) {
@@ -21,19 +26,7 @@ export default class AnimatedRedBlackTree extends RedBlackTree {
     }
 
     this.updateCoordinates = updateCoordinates.bind(this);
-  }
-
-  async animateToCoordinates(start) {
-    if (start) {
-      // run transitions of all svgEls to new coordinates
-      // await Promise.all[collection of promises from childs]
-    } else if (this.parent) {
-      this.parent.animateToCoordinates();
-    } else {
-      // it is root node
-      // call elements animation to coordinates with start true for all childs
-      // await Promise.all[collection of promises from childs]
-    }
+    this.animateToCoordinates = animateToCoordinates.bind(this);
   }
 
   async _swapWithParent() {

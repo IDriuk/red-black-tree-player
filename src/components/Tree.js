@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import AnimatedTree from "../animations/AnimatedTree";
-import { canvasTest, initSvg } from "../helpers";
+import { initSvg } from "../helpers";
 
 const runVisualization = async () => {
   const canvas = initSvg();
@@ -14,6 +14,8 @@ const runVisualization = async () => {
 
   animatedTree.updateCoordinates()
   console.log(animatedTree)
+
+  await animatedTree.animateToCoordinates()
 
   // for (let i = 50; i >= 20; i--) {
   //   await animatedTree.remove(i);
