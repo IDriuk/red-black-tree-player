@@ -4,7 +4,7 @@ import { defineArrowMarkers } from "./defineArrowMarkers";
 
 export const initSvg = () => {
   const svg = d3
-    .select("body")
+    .select("#root")
     .append("svg")
     .attr("width", CANVAS_WIDTH + CIRCLE_RADIUS * 2)
     .attr("height", CANVAS_HEIGHT + CIRCLE_RADIUS * 2);

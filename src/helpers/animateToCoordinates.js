@@ -1,6 +1,6 @@
 import { LEFT, RIGHT, TRANSITION_DURATION } from "../config";
 
-const ownAnimations = (coordinates, svgEls, color) => {
+const ownAnimations = (coordinates, svgEls, color, hasLeft, hasRight) => {
   const {
     center,
     linkToParent,
@@ -27,42 +27,46 @@ const ownAnimations = (coordinates, svgEls, color) => {
       .duration(TRANSITION_DURATION)
       .attr("x", center.x)
       .attr("y", center.y + 5)
+      .attr("opacity", 1)
       .on("end", resolve);
   });
 
   const topArrowAnimation = new Promise(resolve => {
+    const { x1, y1, x2, y2 } = linkToParent
     topArrow
       .transition()
       .duration(TRANSITION_DURATION)
-      .attr("opacity", 1)
-      .attr("x1", linkToParent.x1)
-      .attr("y1", linkToParent.y1)
-      .attr("x2", linkToParent.x2)
-      .attr("y2", linkToParent.y2)
+      .attr("opacity", y1 == y2 ? 0 : 1)
+      .attr("x1", x1)
+      .attr("y1", y1)
+      .attr("x2", x2)
+      .attr("y2", y2)
       .on("end", resolve);
   });
 
   const leftArrowAnimation = new Promise(resolve => {
+    const { x1, y1, x2, y2 } = linkToLeftChild
     leftArrow
       .transition()
       .duration(TRANSITION_DURATION)
-      .attr("opacity", 1)
-      .attr("x1", linkToLeftChild.x1)
-      .attr("y1", linkToLeftChild.y1)
-      .attr("x2", linkToLeftChild.x2)
-      .attr("y2", linkToLeftChild.y2)
+      .attr("opacity", hasLeft ? '1' : '0')
+      .attr("x1", x1)
+      .attr("y1", y1)
+      .attr("x2", x2)
+      .attr("y2", hasLeft ? y2 : y1)
       .on("end", resolve);
   });
 
   const rightArrowAnimation = new Promise(resolve => {
+    const { x1, y1, x2, y2 } = linkToRightChild
     rightArrow
       .transition()
       .duration(TRANSITION_DURATION)
-      .attr("opacity", 1)
-      .attr("x1", linkToRightChild.x1)
-      .attr("y1", linkToRightChild.y1)
-      .attr("x2", linkToRightChild.x2)
-      .attr("y2", linkToRightChild.y2)
+      .attr("opacity", hasRight ? 1 : 0)
+      .attr("x1", x1)
+      .attr("y1", y1)
+      .attr("x2", x2)
+      .attr("y2", hasRight ? y2 : y1)
       .on("end", resolve);
   });
 
@@ -92,7 +96,7 @@ export function animateToCoordinates(start) {
   }
 
   return Promise.all([
-    ownAnimations(coordinates, svgEls, color),
+    ownAnimations(coordinates, svgEls, color, leftAnimation, rightAnimation),
     leftAnimation,
     rightAnimation
   ]);

@@ -29,7 +29,7 @@ export default class AnimatedRedBlackTree extends RedBlackTree {
     this.animateToCoordinates = animateToCoordinates.bind(this);
   }
 
-  async _swapWithParent() {
+  _swapWithParent() {
     let replacement = new AnimatedRedBlackTree(
       this.canvas,
       this.value,
@@ -66,7 +66,7 @@ export default class AnimatedRedBlackTree extends RedBlackTree {
     });
   }
 
-  async insert(value) {
+  insert(value) {
     if (this.value === undefined) {
       this.value = value;
       this.paintBlack();
