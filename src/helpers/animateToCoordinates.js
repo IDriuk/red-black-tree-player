@@ -88,7 +88,7 @@ export function animateToCoordinates(start) {
   }
 
   if (this.children[RIGHT] !== undefined) {
-    rightAnimation = this.children[RIGHT].updateCoordinates(true);
+    rightAnimation = this.children[RIGHT].animateToCoordinates(true);
   }
 
   return Promise.all([

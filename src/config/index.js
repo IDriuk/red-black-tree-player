@@ -8,4 +8,4 @@ export const CANVAS_WIDTH = 800;
 export const CANVAS_HEIGHT = 400;
 export const CIRCLE_RADIUS = 20;
 export const LINK_DELTA = 3;
-export const TRANSITION_DURATION = 500;
+export const TRANSITION_DURATION = 2000;
